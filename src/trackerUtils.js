@@ -53,6 +53,7 @@ const XSTBTN = ({ torrentUrl, freeleech }) => {
        href="#"
        className="sendtoclient"
        onclick={async (e) => {
+          e.preventDefault();
           if (freeleech)
            if (!confirm('After sending to client a feeleech token will be consumed!'))
             return;
